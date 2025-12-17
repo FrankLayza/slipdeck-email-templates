@@ -1,307 +1,285 @@
 <!DOCTYPE html>
 <html>
-  <head> </head>
-  <body>
-    <div
-      style="
-        width: 1440px;
-        height: 2242px;
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="globals.css" />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        margin: 0;
+        padding: 0;
+        background: white;
+        font-family: Teachers;
+      }
+      .email-container {
+        max-width: 1440px;
+        width: 100%;
+        margin: 0 auto;
         position: relative;
         background: white;
+        padding: 20px;
+      }
+      .header {
+        width: 100%;
+        max-width: 1280px;
+        margin: 0 auto 40px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+      }
+      .header img {
+        max-width: 229px;
+        width: 100%;
+        height: auto;
+      }
+      .hero-section {
+        width: 100%;
+        max-width: 1280px;
+        margin: 0 auto 40px;
+        background: #a9d621;
+        border-radius: 8px;
+        border: 3px #1e1e1e solid;
+        padding: 40px 20px;
+        position: relative;
+        min-height: 409px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      .hero-title {
+        color: #222222;
+        font-size: clamp(32px, 5vw, 80px);
+        font-weight: 700;
+        text-align: center;
+        word-wrap: break-word;
+        margin-bottom: 20px;
+      }
+      .hero-image {
+        max-width: 203px;
+        width: 100%;
+        height: auto;
+        margin: 20px 0;
+      }
+      .content-box {
+        width: 100%;
+        max-width: 1300px;
+        margin: 0 auto 40px;
+        padding: clamp(20px, 3vw, 42px);
+        background: #f5ffd5;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 54px;
+      }
+      .content-box-inner {
+        width: 100%;
+        color: #3f3f3f;
+        font-size: clamp(18px, 2.5vw, 40px);
+        font-weight: 400;
+        line-height: 1.3;
+        word-wrap: break-word;
+      }
+      .content-box-inner .small-text {
+        font-size: clamp(14px, 2vw, 32px);
+        line-height: 1.2;
+      }
+      .cta-button {
+        display: inline-block;
+        padding: 20px clamp(40px, 10vw, 216px);
+        background: #a9d621;
+        border-radius: 6px;
+        text-align: center;
+        text-decoration: none;
+        color: black;
+        font-size: clamp(20px, 2vw, 32px);
+        font-weight: 400;
+        line-height: 1.2;
+      }
+      .footer-text {
+        width: 100%;
+        max-width: 1000px;
+        margin: 40px auto;
+        text-align: center;
+        color: black;
+        font-size: clamp(18px, 2vw, 30px);
+        font-weight: 400;
+        word-wrap: break-word;
+        padding: 0 20px;
+      }
+      .footer {
+        width: 100%;
+        max-width: 712px;
+        margin: 60px auto 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+      }
+      .social-icons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        flex-wrap: wrap;
+      }
+      .social-icon {
+        padding: 8px;
         overflow: hidden;
-      "
-    >
-      <div
-        style="
-          width: 1280px;
-          height: 409px;
-          left: 90px;
-          top: 320px;
-          position: absolute;
-          background: #a9d621;
-          border-radius: 8px;
-          border: 3px #1e1e1e solid;
-        "
-      ></div>
-      <div
-        style="
-          left: 354px;
-          top: 374px;
-          position: absolute;
-          color: #222222;
-          font-size: 80px;
-          font-family: Teachers;
-          font-weight: 700;
-          word-wrap: break-word;
-        "
-      >
-        Testimonial Request
+        border-radius: 10px;
+        outline: 1px black solid;
+        outline-offset: -1px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-width: 43px;
+      }
+      .social-icon div {
+        width: 27.2px;
+        height: 28px;
+      }
+      .social-icon.white {
+        background: white;
+      }
+      .social-icon.white div {
+        background: black;
+      }
+      .copyright {
+        width: 100%;
+        text-align: center;
+        color: #323232;
+        font-size: clamp(16px, 2vw, 32px);
+        font-weight: 400;
+        word-wrap: break-word;
+      }
+      @media (max-width: 768px) {
+        .email-container {
+          padding: 10px;
+        }
+        .hero-section {
+          padding: 30px 15px;
+          min-height: auto;
+        }
+        .hero-title {
+          font-size: clamp(28px, 8vw, 50px);
+        }
+        .content-box {
+          padding: 20px 15px;
+          gap: 30px;
+        }
+        .content-box-inner {
+          font-size: clamp(16px, 4vw, 24px);
+        }
+        .content-box-inner .small-text {
+          font-size: clamp(14px, 3vw, 20px);
+        }
+        .cta-button {
+          padding: 15px 30px;
+          font-size: 18px;
+        }
+        .footer-text {
+          font-size: clamp(16px, 3vw, 22px);
+        }
+        .header {
+          margin-bottom: 20px;
+        }
+        .header img {
+          max-width: 150px;
+        }
+      }
+      @media (max-width: 480px) {
+        .hero-title {
+          font-size: 24px;
+        }
+        .content-box {
+          gap: 20px;
+        }
+        .content-box-inner {
+          font-size: 16px;
+        }
+        .content-box-inner .small-text {
+          font-size: 14px;
+        }
+        .copyright {
+          font-size: 14px;
+        }
+        .footer-text {
+          font-size: 16px;
+        }
+        .social-icons {
+          gap: 10px;
+        }
+        .cta-button {
+          padding: 12px 20px;
+          font-size: 16px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="email-container">
+      <div class="header">
+        <img src="https://placehold.co/229x197" alt="Logo" />
       </div>
-      <img
-        style="
-          width: 203px;
-          height: 255px;
-          left: 618px;
-          top: 474px;
-          position: absolute;
-        "
-        src="https://placehold.co/203x255"
-      />
-      <div
-        style="
-          width: 1300px;
-          padding: 42px;
-          left: 70px;
-          top: 826px;
-          position: absolute;
-          background: #f5ffd5;
-          border-radius: 8px;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          gap: 54px;
-          display: inline-flex;
-        "
-      >
-        <div style="width: 1199px">
-          <span
-            style="
-              color: #3f3f3f;
-              font-size: 40px;
-              font-family: Teachers;
-              font-weight: 400;
-              line-height: 46.07px;
-              word-wrap: break-word;
-            "
-            >You've Been Asked for Feedback!<br />{{requesterName}} would
-            greatly appreciate your testimonial about their work or
-            collaboration<br /><br />{{#if message}}<br /><br /></span
-          ><span
-            style="
-              color: #3f3f3f;
-              font-size: 32px;
-              font-family: Teachers;
-              font-weight: 400;
-              line-height: 36.85px;
-              word-wrap: break-word;
-            "
-            >Your Published Testimonial:<br />{{content}}</span
-          >
+      
+      <div class="hero-section">
+        <div class="hero-title">Testimonial Request</div>
+        <img class="hero-image" src="https://placehold.co/203x255" alt="Testimonial request illustration" />
+      </div>
+      
+      <div class="content-box">
+        <div class="content-box-inner">
+          You've Been Asked for Feedback!<br />{{requesterName}} would
+          greatly appreciate your testimonial about their work or
+          collaboration<br /><br />{{#if message}}<br /><br />
+          <span class="small-text">Your Published Testimonial:<br />{{content}}</span>
         </div>
       </div>
-      <div
-        style="
-          width: 1280px;
-          left: 80px;
-          top: 81px;
-          position: absolute;
-          justify-content: flex-start;
-          align-items: center;
-          gap: 932px;
-          display: inline-flex;
-        "
-      >
-        <img
-          style="width: 229px; height: 197.24px"
-          src="https://placehold.co/229x197"
-        />
-      </div>
-      <div
-        style="
-          width: 712px;
-          left: 364px;
-          top: 2043px;
-          position: absolute;
-          flex-direction: column;
-          justify-content: flex-start;
-          align-items: center;
-          gap: 24px;
-          display: inline-flex;
-        "
-      >
-        <div
-          style="
-            justify-content: flex-start;
-            align-items: center;
-            gap: 20px;
-            display: inline-flex;
-          "
-        >
-          <div
-            style="
-              padding: 8px;
-              overflow: hidden;
-              border-radius: 10px;
-              outline: 1px black solid;
-              outline-offset: -1px;
-              justify-content: flex-start;
-              align-items: center;
-              gap: 10px;
-              display: flex;
-            "
-          >
-            <div style="width: 27.2px; height: 28px"></div>
-          </div>
-          <div
-            style="
-              padding: 8px;
-              background: white;
-              overflow: hidden;
-              border-radius: 10px;
-              outline: 1px black solid;
-              outline-offset: -1px;
-              justify-content: flex-start;
-              align-items: center;
-              gap: 10px;
-              display: flex;
-            "
-          >
-            <div style="width: 27.2px; height: 28px; background: black"></div>
-          </div>
-          <div
-            style="
-              width: 41.72px;
-              padding: 8px;
-              overflow: hidden;
-              border-radius: 10px;
-              outline: 1px black solid;
-              outline-offset: -1px;
-              justify-content: flex-start;
-              align-items: center;
-              gap: 10px;
-              display: flex;
-            "
-          >
-            <div style="width: 27.2px; height: 28px"></div>
-          </div>
-          <div
-            style="
-              width: 43.37px;
-              padding: 8px;
-              background: white;
-              overflow: hidden;
-              border-radius: 10px;
-              outline: 1px black solid;
-              outline-offset: -1px;
-              justify-content: center;
-              align-items: center;
-              gap: 10px;
-              display: flex;
-            "
-          >
-            <div style="width: 19px; height: 28px; background: black"></div>
-          </div>
-        </div>
-        <div
-          style="
-            align-self: stretch;
-            color: #323232;
-            font-size: 32px;
-            font-family: Teachers;
-            font-weight: 400;
-            word-wrap: break-word;
-          "
-        >
-          © {{currentYear}} {{appName}}. All rights reserved.
-        </div>
-      </div>
-      <div
-        style="
-          width: 1300px;
-          padding: 42px;
-          left: 70px;
-          top: 1283px;
-          position: absolute;
-          background: #f5ffd5;
-          border-radius: 8px;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          gap: 54px;
-          display: inline-flex;
-        "
-      >
-        <div
-          style="
-            width: 1199px;
-            color: #3f3f3f;
-            font-size: 40px;
-            font-family: Teachers;
-            font-weight: 400;
-            line-height: 46.07px;
-            word-wrap: break-word;
-          "
-        >
+      
+      <div class="content-box">
+        <div class="content-box-inner">
           Sharing your experience helps {{requesterName}} showcase their skills
           and build their professional reputation.
         </div>
-        <div
-          style="
-            padding-left: 216px;
-            padding-right: 216px;
-            padding-top: 20px;
-            padding-bottom: 20px;
-            background: #a9d621;
-            border-radius: 6px;
-            justify-content: center;
-            align-items: center;
-            gap: 10px;
-            display: inline-flex;
-          "
-        >
-          <div
-            style="
-              color: black;
-              font-size: 32px;
-              font-family: Teachers;
-              font-weight: 400;
-              line-height: 36.85px;
-              word-wrap: break-word;
-            "
-          >
-            Write your testimonial
-          </div>
-        </div>
-        <div style="width: 1200px">
-          <span
-            style="
-              color: #3f3f3f;
-              font-size: 40px;
-              font-family: Teachers;
-              font-weight: 400;
-              line-height: 46.07px;
-              word-wrap: break-word;
-            "
-            >What to include in your testimonial:<br /><br /></span
-          ><span
-            style="
-              color: #3f3f3f;
-              font-size: 40px;
-              font-family: Teachers;
-              font-weight: 400;
-              line-height: 46.07px;
-              word-wrap: break-word;
-            "
-            >Your experience working with {{requesterName}}<br />Specific skills
-            or qualities you appreciated<br />The impact of their work on your
-            project/business<br />Why you would recommend them to others</span
-          >
+        <a href="{{testimonialUrl}}" class="cta-button">Write your testimonial</a>
+        <div class="content-box-inner">
+          What to include in your testimonial:<br /><br />Your experience working with {{requesterName}}<br />Specific skills
+          or qualities you appreciated<br />The impact of their work on your
+          project/business<br />Why you would recommend them to others
         </div>
       </div>
-      <div
-        style="
-          left: 200px;
-          top: 1944px;
-          position: absolute;
-          color: black;
-          font-size: 30px;
-          font-family: Teachers;
-          font-weight: 400;
-          word-wrap: break-word;
-        "
-      >
+      
+      <div class="footer-text">
         If you have any questions or concerns, please contact {{requesterName}}
         directly.
+      </div>
+      
+      <div class="footer">
+        <div class="social-icons">
+          <div class="social-icon">
+            <div></div>
+          </div>
+          <div class="social-icon white">
+            <div></div>
+          </div>
+          <div class="social-icon">
+            <div></div>
+          </div>
+          <div class="social-icon white">
+            <div style="width: 19px; height: 28px; background: black"></div>
+          </div>
+        </div>
+        <div class="copyright">
+          © {{currentYear}} {{appName}}. All rights reserved.
+        </div>
       </div>
     </div>
   </body>

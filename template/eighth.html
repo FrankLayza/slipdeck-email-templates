@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="globals.css" />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        margin: 0;
+        padding: 0;
+        background: white;
+        font-family: Teachers;
+      }
+      .email-container {
+        max-width: 1440px;
+        width: 100%;
+        margin: 0 auto;
+        position: relative;
+        background: white;
+        padding: 20px;
+      }
+      .header {
+        width: 100%;
+        max-width: 1280px;
+        margin: 0 auto 40px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+      }
+      .header img {
+        max-width: 229px;
+        width: 100%;
+        height: auto;
+      }
+      .hero-section {
+        width: 100%;
+        max-width: 1280px;
+        margin: 0 auto 40px;
+        background: #a9d621;
+        border-radius: 8px;
+        border: 3px #1e1e1e solid;
+        padding: 40px 20px;
+        position: relative;
+        min-height: 409px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      .hero-title {
+        color: #222222;
+        font-size: clamp(32px, 5vw, 80px);
+        font-weight: 700;
+        text-align: center;
+        word-wrap: break-word;
+        margin-bottom: 20px;
+      }
+      .hero-image {
+        max-width: 227px;
+        width: 100%;
+        height: auto;
+        margin: 20px 0;
+      }
+      .content-box {
+        width: 100%;
+        max-width: 1300px;
+        margin: 0 auto 40px;
+        padding: clamp(20px, 3vw, 42px);
+        background: #f5ffd5;
+        border-radius: 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .content-box-inner {
+        width: 100%;
+        color: #3f3f3f;
+        font-size: clamp(18px, 2.5vw, 40px);
+        font-weight: 400;
+        line-height: 1.3;
+        word-wrap: break-word;
+      }
+      .content-box-inner .highlight {
+        color: #a9d621;
+        text-decoration: underline;
+      }
+      .footer-text {
+        width: 100%;
+        max-width: 1199px;
+        margin: 0 auto 40px;
+        color: #3f3f3f;
+        font-size: clamp(18px, 2.5vw, 40px);
+        font-weight: 400;
+        line-height: 1.3;
+        word-wrap: break-word;
+        padding: 0 20px;
+      }
+      .footer {
+        width: 100%;
+        max-width: 712px;
+        margin: 60px auto 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+      }
+      .social-icons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        flex-wrap: wrap;
+      }
+      .social-icon {
+        padding: 8px;
+        overflow: hidden;
+        border-radius: 10px;
+        outline: 1px black solid;
+        outline-offset: -1px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-width: 43px;
+      }
+      .social-icon div {
+        width: 27.2px;
+        height: 28px;
+      }
+      .social-icon.white {
+        background: white;
+      }
+      .social-icon.white div {
+        background: black;
+      }
+      .copyright {
+        width: 100%;
+        text-align: center;
+        color: #323232;
+        font-size: clamp(16px, 2vw, 32px);
+        font-weight: 400;
+        word-wrap: break-word;
+      }
+      @media (max-width: 768px) {
+        .email-container {
+          padding: 10px;
+        }
+        .hero-section {
+          padding: 30px 15px;
+          min-height: auto;
+        }
+        .hero-title {
+          font-size: clamp(28px, 8vw, 50px);
+        }
+        .content-box {
+          padding: 20px 15px;
+        }
+        .content-box-inner {
+          font-size: clamp(16px, 4vw, 24px);
+        }
+        .footer-text {
+          font-size: clamp(16px, 4vw, 24px);
+        }
+        .header {
+          margin-bottom: 20px;
+        }
+        .header img {
+          max-width: 150px;
+        }
+      }
+      @media (max-width: 480px) {
+        .hero-title {
+          font-size: 24px;
+        }
+        .content-box-inner {
+          font-size: 16px;
+        }
+        .footer-text {
+          font-size: 16px;
+        }
+        .copyright {
+          font-size: 14px;
+        }
+        .social-icons {
+          gap: 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="email-container">
+      <div class="header">
+        <img src="https://placehold.co/229x197" alt="Logo" />
+      </div>
+      
+      <div class="hero-section">
+        <div class="hero-title">Welcome to {{appName}}!</div>
+        <img class="hero-image" src="https://placehold.co/227x274" alt="Welcome illustration" />
+      </div>
+      
+      <div class="content-box">
+        <div class="content-box-inner">
+          Your account has been successfully created. We're excited to have you
+          on board!<br /><br />Get started by exploring your dashboard and
+          setting up your profile.
+        </div>
+      </div>
+      
+      <div class="footer-text">
+        Need help getting started? <span class="highlight">Check out our guide</span>.<br /><br />Happy freelancing! The {{appName}} Team
+      </div>
+      
+      <div class="footer">
+        <div class="social-icons">
+          <div class="social-icon">
+            <div></div>
+          </div>
+          <div class="social-icon white">
+            <div></div>
+          </div>
+          <div class="social-icon">
+            <div></div>
+          </div>
+          <div class="social-icon white">
+            <div style="width: 19px; height: 28px; background: black"></div>
+          </div>
+        </div>
+        <div class="copyright">
+          © {{currentYear}} {{appName}}. All rights reserved.
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
