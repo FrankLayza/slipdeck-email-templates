@@ -52,7 +52,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        
+
         /* ADD THIS LINE BELOW to create the solid bottom-left shadow */
         box-shadow: -15px 15px 0px 0px #1e1e1e;
       }
@@ -230,54 +230,72 @@
   <body>
     <div class="email-container">
       <div class="header">
-        <img src="https://placehold.co/229x197" alt="Logo" />
+        <img
+          src="https://res.cloudinary.com/drbi9pu6v/image/upload/v1766504765/slipdeck_hjdprj.png"
+          alt="Logo"
+        />
       </div>
-      
+
       <div class="hero-section">
         <div class="hero-title">Your Testimonial is Live!</div>
-        <img class="hero-image" src="https://placehold.co/202x275" alt="Testimonial illustration" />
+        <img
+          class="hero-image"
+          src="https://res.cloudinary.com/drbi9pu6v/image/upload/v1766504317/sixth-template_atgqfc.png"
+          alt="Testimonial illustration"
+        />
       </div>
-      
+
       <div class="content-box">
         <div class="content-box-inner">
           Thank You for Your Kind Words! <br /><br />Your testimonial for
           {{recipientName}} has been approved and is now visible on their
           profile.<br /><br />
-          <span class="small-text">Your Published Testimonial:<br />{{content}}</span>
+          <span class="small-text"
+            >Your Published Testimonial:<br />{{content}}</span
+          >
         </div>
       </div>
-      
+
       <div class="content-box">
         <div class="content-box-inner">
-          Your testimonial helps:<br /><br />Showcase {{recipientName}}'s skills and expertise<br />Build trust
-          with potential clients or employers<br />Highlight successful
-          collaborations and projects<br />Strengthen their professional
-          network
+          Your testimonial helps:<br /><br />Showcase {{recipientName}}'s skills
+          and expertise<br />Build trust with potential clients or employers<br />Highlight
+          successful collaborations and projects<br />Strengthen their
+          professional network
         </div>
         <a href="{{profileUrl}}" class="cta-button">View Recipient Profile</a>
-        <div style="color: #3f3f3f; font-size: clamp(14px, 2vw, 32px); font-weight: 400; line-height: 1.2; word-wrap: break-word; text-align: center;">
+        <div
+          style="
+            color: #3f3f3f;
+            font-size: clamp(14px, 2vw, 32px);
+            font-weight: 400;
+            line-height: 1.2;
+            word-wrap: break-word;
+            text-align: center;
+          "
+        >
           Your testimonial is now part of {{recipientName}}'s professional story
         </div>
       </div>
-      
+
       <div class="footer-text">
         Thank you for contributing to the {{appName}} community!
       </div>
-      
+
       <div class="footer">
         <div class="social-icons">
-          <div class="social-icon">
-            <div></div>
-          </div>
-          <div class="social-icon white">
-            <div></div>
-          </div>
-          <div class="social-icon">
-            <div></div>
-          </div>
-          <div class="social-icon white">
-            <div style="width: 19px; height: 28px; background: black"></div>
-          </div>
+          <a href="">
+            <img
+              src="https://res.cloudinary.com/drbi9pu6v/image/upload/v1766505157/twitter_qmj5gw.png"
+              alt="socials"
+            />
+          </a>
+          <a href="">
+            <img
+              src="https://res.cloudinary.com/drbi9pu6v/image/upload/v1766505165/facebook_kcm4gg.png"
+              alt="socials"
+            />
+          </a>
         </div>
         <div class="copyright">
           © {{currentYear}} {{appName}}. All rights reserved.
