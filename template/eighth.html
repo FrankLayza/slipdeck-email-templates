@@ -7,75 +7,70 @@
     <link rel="stylesheet" href="globals.css" />
     <link rel="stylesheet" href="style.css" />
     <style>
+      @import url('https://fonts.googleapis.com/css2?family=Teachers:ital,wght@0,400..800;1,400..800&display=swap');
       * {
         box-sizing: border-box;
         margin: 0;
         padding: 0;
+        font-family: Teachers, sans-serif;
       }
       body {
         margin: 0;
         padding: 0;
-        background: white;
+        background-color: #f8f9fa;
         font-family: Teachers;
       }
       .email-container {
-        max-width: 1440px;
+        max-width: 600px;
         width: 100%;
         margin: 0 auto;
         position: relative;
-        background: white;
-        padding: 20px;
+        background-color: #ffffff;
       }
       .header {
-        width: 100%;
-        max-width: 1280px;
-        margin: 0 auto 40px;
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
+        padding: 40px 20px 10px 20px;
+        text-align: left;
       }
       .header img {
-        max-width: 229px;
-        width: 100%;
+        max-width: 120px;
         height: auto;
+        display: block;
+        margin: 0;
       }
       .hero-section {
         width: 100%;
-        max-width: 1280px;
-        margin: 0 auto 40px;
+        margin: 0 0 24px 0;
         background: #a9d621;
         border-radius: 8px;
         border: 3px #1e1e1e solid;
-        padding: 40px 20px;
+        padding: 24px 20px;
         position: relative;
-        min-height: 409px;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        gap: 16px;
 
         /* ADD THIS LINE BELOW to create the solid bottom-left shadow */
         box-shadow: -15px 15px 0px 0px #1e1e1e;
       }
       .hero-title {
         color: #222222;
-        font-size: clamp(32px, 5vw, 80px);
+        font-size: clamp(18px, 3vw, 28px);
         font-weight: 700;
         text-align: center;
         word-wrap: break-word;
-        margin-bottom: 20px;
+        margin: 0;
       }
       .hero-image {
-        max-width: 227px;
-        width: 100%;
+        max-width: 120px;
+        width: auto;
         height: auto;
-        margin: 20px 0;
       }
       .content-box {
         width: 100%;
-        max-width: 1300px;
-        margin: 0 auto 40px;
-        padding: clamp(20px, 3vw, 42px);
+        margin: 0 0 24px 0;
+        padding: 40px 20px;
         background: #f5ffd5;
         border-radius: 8px;
         display: flex;
@@ -85,9 +80,9 @@
       .content-box-inner {
         width: 100%;
         color: #3f3f3f;
-        font-size: clamp(18px, 2.5vw, 40px);
+        font-size: 16px;
         font-weight: 400;
-        line-height: 1.3;
+        line-height: 1.6;
         word-wrap: break-word;
       }
       .content-box-inner .highlight {
@@ -96,19 +91,18 @@
       }
       .footer-text {
         width: 100%;
-        max-width: 1199px;
-        margin: 0 auto 40px;
+        margin: 0 auto 24px;
+        padding: 0 20px;
         color: #3f3f3f;
-        font-size: clamp(18px, 2.5vw, 40px);
+        font-size: clamp(16px, 2.5vw, 24px);
         font-weight: 400;
         line-height: 1.3;
         word-wrap: break-word;
-        padding: 0 20px;
       }
       .footer {
         width: 100%;
-        max-width: 712px;
-        margin: 60px auto 0;
+        padding: 32px 20px 40px 20px;
+        border-top: 1px solid #e5e7eb;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -122,7 +116,7 @@
         flex-wrap: wrap;
       }
       .social-icon {
-        padding: 8px;
+        padding: 4px;
         overflow: hidden;
         border-radius: 10px;
         outline: 1px black solid;
@@ -130,11 +124,16 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        min-width: 43px;
+        min-width: 28px;
+      }
+      .social-icon img {
+        width: 16px;
+        height: 16px;
+        display: block;
       }
       .social-icon div {
-        width: 27.2px;
-        height: 28px;
+        width: 16px;
+        height: 16px;
       }
       .social-icon.white {
         background: white;
@@ -146,52 +145,35 @@
         width: 100%;
         text-align: center;
         color: #323232;
-        font-size: clamp(16px, 2vw, 32px);
+        font-size: 14px;
         font-weight: 400;
         word-wrap: break-word;
       }
-      @media (max-width: 768px) {
-        .email-container {
-          padding: 10px;
-        }
-        .hero-section {
-          padding: 30px 15px;
-          min-height: auto;
-        }
-        .hero-title {
-          font-size: clamp(28px, 8vw, 50px);
-        }
+      @media only screen and (max-width: 600px) {
+        .email-container,
         .content-box {
-          padding: 20px 15px;
-        }
-        .content-box-inner {
-          font-size: clamp(16px, 4vw, 24px);
-        }
-        .footer-text {
-          font-size: clamp(16px, 4vw, 24px);
+          padding: 16px !important;
         }
         .header {
-          margin-bottom: 20px;
+          padding: 24px 8px 8px 8px !important;
         }
-        .header img {
-          max-width: 150px;
+        .hero-section {
+          padding: 20px 15px !important;
         }
-      }
-      @media (max-width: 480px) {
         .hero-title {
-          font-size: 24px;
+          font-size: clamp(18px, 4vw, 24px) !important;
+        }
+        .hero-image {
+          max-width: 100px !important;
         }
         .content-box-inner {
-          font-size: 16px;
+          font-size: 16px !important;
         }
         .footer-text {
-          font-size: 16px;
+          font-size: 16px !important;
         }
         .copyright {
-          font-size: 14px;
-        }
-        .social-icons {
-          gap: 10px;
+          font-size: 14px !important;
         }
       }
     </style>
@@ -232,12 +214,16 @@
         <div class="social-icons">
           <a href="">
             <img
+              width="28px"
+              height="28px"
               src="https://res.cloudinary.com/drbi9pu6v/image/upload/v1766505157/twitter_qmj5gw.png"
               alt="socials"
             />
           </a>
           <a href="">
             <img
+              width="28px"
+              height="28px"
               src="https://res.cloudinary.com/drbi9pu6v/image/upload/v1766505165/facebook_kcm4gg.png"
               alt="socials"
             />
