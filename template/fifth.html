@@ -5,222 +5,57 @@
     <meta charset="utf-8" />
     <link rel="stylesheet" href="globals.css" />
     <link rel="stylesheet" href="style.css" />
-    <style>
-      @import url('https://fonts.googleapis.com/css2?family=Teachers:ital,wght@0,400..800;1,400..800&display=swap');
-      * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-        font-family: Teachers, sans-serif;
-      }
-      body {
-        margin: 0;
-        padding: 0;
-        background-color: #f8f9fa;
-        font-family: Teachers;
-      }
-      .email-container {
-        max-width: 600px;
-        width: 100%;
-        margin: 0 auto;
-        position: relative;
-        background-color: #ffffff;
-      }
-      .header {
-        padding: 40px 20px 10px 20px;
-        text-align: left;
-      }
-      .header img {
-        max-width: 120px;
-        height: auto;
-        display: block;
-        margin: 0;
-      }
-      .hero-section {
-        width: 100%;
-        margin: 0 0 24px 0;
-        background: #a9d621;
-        border-radius: 8px;
-        border: 3px #1e1e1e solid;
-        padding: 24px 20px;
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 16px;
-        
-        /* ADD THIS LINE BELOW to create the solid bottom-left shadow */
-        box-shadow: -15px 15px 0px 0px #1e1e1e;
-      }
-      .hero-title {
-        color: #222222;
-        font-size: clamp(18px, 3vw, 28px);
-        font-weight: 700;
-        text-align: center;
-        word-wrap: break-word;
-        margin: 0;
-      }
-      .hero-image {
-        max-width: 120px;
-        width: auto;
-        height: auto;
-      }
-      .content-box {
-        width: 100%;
-        margin: 0 0 24px 0;
-        padding: 40px 20px;
-        background: #f5ffd5;
-        border-radius: 8px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 54px;
-      }
-      .content-box-inner {
-        width: 100%;
-        color: #3f3f3f;
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 1.6;
-        word-wrap: break-word;
-      }
-      .cta-button {
-        display: inline-block;
-        padding: 20px clamp(40px, 10vw, 216px);
-        background: #a9d621;
-        border-radius: 6px;
-        text-align: center;
-        text-decoration: none;
-        color: black;
-        font-size: clamp(20px, 2vw, 32px);
-        font-weight: 400;
-        line-height: 1.2;
-      }
-      .footer {
-        width: 100%;
-        padding: 32px 20px 40px 20px;
-        border-top: 1px solid #e5e7eb;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 24px;
-      }
-      .social-icons {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 20px;
-        flex-wrap: wrap;
-      }
-      .social-icon {
-        padding: 4px;
-        overflow: hidden;
-        border-radius: 10px;
-        outline: 1px black solid;
-        outline-offset: -1px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-width: 28px;
-      }
-      .social-icon img {
-        width: 16px;
-        height: 16px;
-        display: block;
-      }
-      .social-icon div {
-        width: 16px;
-        height: 16px;
-      }
-      .social-icon.white {
-        background: white;
-      }
-      .social-icon.white div {
-        background: black;
-      }
-      .copyright {
-        width: 100%;
-        text-align: center;
-        color: #323232;
-        font-size: 14px;
-        font-weight: 400;
-        word-wrap: break-word;
-      }
-      @media only screen and (max-width: 600px) {
-        .email-container,
-        .content-box {
-          padding: 16px !important;
-        }
-        .header {
-          padding: 24px 8px 8px 8px !important;
-        }
-        .hero-section {
-          padding: 20px 15px !important;
-        }
-        .hero-title {
-          font-size: clamp(18px, 4vw, 24px) !important;
-        }
-        .hero-image {
-          max-width: 100px !important;
-        }
-        .content-box-inner {
-          font-size: 16px !important;
-        }
-        .cta-button {
-          padding: 12px 24px !important;
-          font-size: 16px !important;
-        }
-        .copyright {
-          font-size: 14px !important;
-        }
-      }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Teachers:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
   </head>
-  <body>
-    <div class="email-container">
-      <div class="header">
-        <img src="https://res.cloudinary.com/drbi9pu6v/image/upload/v1766504765/slipdeck_hjdprj.png" alt="Logo" />
+  <body style="margin: 0; padding: 0; background-color: #f8f9fa; font-family: Teachers; box-sizing: border-box;">
+    <div class="email-container" style="max-width: 600px; width: 100%; margin: 0 auto; position: relative; background-color: #ffffff; box-sizing: border-box;">
+      <div class="header" style="padding: 40px 20px 10px 20px; text-align: left; box-sizing: border-box; margin: 0;">
+        <img src="https://res.cloudinary.com/drbi9pu6v/image/upload/v1766504765/slipdeck_hjdprj.png" alt="Logo" style="max-width: 120px; height: auto; display: block; margin: 0; box-sizing: border-box;" />
       </div>
       
-      <div class="hero-section">
-        <div class="hero-title">Password Reset Request</div>
-        <img class="hero-image" src="https://res.cloudinary.com/drbi9pu6v/image/upload/v1766504237/fifth-template_rtjqy6.png" alt="Password reset illustration" />
+      <div class="hero-section" style="width: 100%; margin: 0 0 24px 0; background: #a9d621; border-radius: 8px; border: 3px #1e1e1e solid; padding: 24px 20px; position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 16px; box-shadow: -15px 15px 0px 0px #1e1e1e; box-sizing: border-box;">
+        <div class="hero-title" style="color: #222222; font-size: clamp(18px, 3vw, 28px); font-weight: 700; text-align: center; word-wrap: break-word; margin: 0; box-sizing: border-box; font-family: Teachers; padding: 0;">
+          Password Reset Request
+        </div>
+        <img class="hero-image" src="https://res.cloudinary.com/drbi9pu6v/image/upload/v1766504237/fifth-template_rtjqy6.png" alt="Password reset illustration" style="max-width: 120px; width: auto; height: auto; box-sizing: border-box;" />
       </div>
       
-      <div class="content-box">
-        <div class="content-box-inner">
+      <div class="content-box" style="width: 100%; margin: 0 0 24px 0; padding: 40px 20px; background: #f5ffd5; border-radius: 8px; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 54px; box-sizing: border-box;">
+        <div class="content-box-inner" style="width: 100%; color: #3f3f3f; font-size: 16px; font-weight: 400; line-height: 1.6; word-wrap: break-word; box-sizing: border-box; font-family: Teachers; margin: 0; padding: 0;">
           You requested to reset your password for {{appName}}.
         </div>
-        <a href="{{resetLink}}" class="cta-button">Reset Password</a>
-        <div class="content-box-inner">
+        <a href="{{resetLink}}" class="cta-button" style="display: inline-block; padding: 20px clamp(40px, 10vw, 216px); background: #a9d621; border-radius: 6px; text-align: center; text-decoration: none; color: black; font-size: clamp(20px, 2vw, 32px); font-weight: 400; line-height: 1.2; box-sizing: border-box; font-family: Teachers;">
+          Reset Password
+        </a>
+        <div class="content-box-inner" style="width: 100%; color: #3f3f3f; font-size: 16px; font-weight: 400; line-height: 1.6; word-wrap: break-word; box-sizing: border-box; font-family: Teachers; margin: 0; padding: 0;">
           This link will expire in 1 hour.<br />If you didn't request this
           reset, please ignore this email and your password will remain
           unchanged.
         </div>
       </div>
       
-      <div class="footer">
-        <div class="social-icons">
-          <a href="">
+      <div class="footer" style="width: 100%; padding: 32px 20px 40px 20px; border-top: 1px solid #e5e7eb; display: flex; flex-direction: column; align-items: center; gap: 24px; box-sizing: border-box; margin: 0;">
+        <div class="social-icons" style="display: flex; justify-content: center; align-items: center; gap: 20px; flex-wrap: wrap; box-sizing: border-box; margin: 0; padding: 0;">
+          <a href="" style="box-sizing: border-box; padding: 4px; overflow: hidden; border-radius: 10px; display: flex; justify-content: center; align-items: center; min-width: 28px; margin: 0; text-decoration: none;">
             <img
-              width="28px"
-              height="28px"
+              width="38px"
+              height="38px"
               src="https://res.cloudinary.com/drbi9pu6v/image/upload/v1766505157/twitter_qmj5gw.png"
               alt="socials"
+              style="width: 30px; height: 30px; display: block; box-sizing: border-box;"
             />
           </a>
-          <a href="">
+          <a href="" style="box-sizing: border-box; padding: 4px; overflow: hidden; border-radius: 10px; display: flex; justify-content: center; align-items: center; min-width: 28px; margin: 0; text-decoration: none;">
             <img
-              width="28px"
-              height="28px"
+              width="38px"
+              height="38px"
               src="https://res.cloudinary.com/drbi9pu6v/image/upload/v1766505165/facebook_kcm4gg.png"
               alt="socials"
+              style="width: 30px; height: 30px; display: block; box-sizing: border-box;"
             />
           </a>
         </div>
-        <div class="copyright">
+        <div class="copyright" style="width: 100%; text-align: center; color: #323232; font-size: 14px; font-weight: 400; word-wrap: break-word; box-sizing: border-box; font-family: Teachers; margin: 0; padding: 0;">
           © {{currentYear}} {{appName}}. All rights reserved.
         </div>
       </div>
