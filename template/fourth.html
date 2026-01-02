@@ -5,7 +5,10 @@
     <meta charset="utf-8" />
     <link rel="stylesheet" href="globals.css" />
     <link rel="stylesheet" href="style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Teachers:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Teachers:ital,wght@0,400..800;1,400..800&display=swap"
+      rel="stylesheet"
+    />
     <style>
       body {
         margin: 0;
@@ -243,6 +246,104 @@
         margin: 0;
         padding: 0;
       }
+
+      /* Mobile Responsive Styles */
+      @media only screen and (max-width: 480px) {
+        .header {
+          padding: 24px 16px 8px 16px;
+        }
+
+        .hero-section {
+          padding: 20px 16px;
+          margin: 0 8px 20px 8px;
+          box-shadow: -8px 8px 0px 0px #1e1e1e;
+          gap: 12px;
+        }
+
+        .hero-title {
+          font-size: 20px;
+        }
+
+        .hero-subtitle {
+          font-size: 14px;
+        }
+
+        .hero-image {
+          max-width: 100px;
+        }
+
+        .content-box {
+          padding: 24px 16px;
+          margin: 0 8px 20px 8px;
+        }
+
+        .content-box-inner {
+          font-size: 15px;
+        }
+
+        .button-wrapper {
+          margin: 20px 0;
+        }
+
+        .cta-button {
+          padding: 10px 20px;
+          font-size: 15px;
+        }
+
+        .security-note,
+        .link-text {
+          padding: 0 16px;
+          font-size: 15px;
+        }
+
+        .footer-text {
+          padding: 0 16px;
+          font-size: 14px;
+        }
+
+        .footer {
+          padding: 24px 16px 32px 16px;
+          gap: 20px;
+        }
+
+        .social-icons {
+          gap: 16px;
+        }
+
+        .copyright {
+          font-size: 13px;
+        }
+      }
+
+      @media only screen and (max-width: 360px) {
+        .hero-section {
+          box-shadow: -6px 6px 0px 0px #1e1e1e;
+          padding: 16px 12px;
+        }
+
+        .hero-title {
+          font-size: 18px;
+        }
+
+        .content-box {
+          padding: 20px 12px;
+        }
+
+        .content-box-inner {
+          font-size: 14px;
+        }
+
+        .security-note,
+        .link-text {
+          padding: 0 12px;
+          font-size: 14px;
+        }
+
+        .cta-button {
+          padding: 10px 16px;
+          font-size: 14px;
+        }
+      }
     </style>
   </head>
   <body>
@@ -256,9 +357,7 @@
 
       <div class="hero-section">
         <div class="hero-content">
-          <div class="hero-title">
-            Confirm Your Subscription
-          </div>
+          <div class="hero-title">Confirm Your Subscription</div>
           <div class="hero-subtitle">
             One click away from joining our community
           </div>
