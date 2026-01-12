@@ -1,24 +1,48 @@
 <mjml>
   <mj-head>
-    <mj-title>Testimonial Request</mj-title>
-    <mj-preview>You've been asked for feedback</mj-preview>
+    <mj-title>Welcome!</mj-title>
+    <mj-preview>Your account has been successfully created</mj-preview>
     <mj-font name="Teachers" href="https://fonts.googleapis.com/css2?family=Teachers:ital,wght@0,400..800;1,400..800&display=swap" />
+    <mj-raw>
+      <meta name="color-scheme" content="light only">
+      <meta name="supported-color-schemes" content="light only">
+    </mj-raw>
     <mj-attributes>
       <mj-all font-family="Teachers, Arial, sans-serif" />
       <mj-text font-size="16px" color="#3f3f3f" line-height="1.6" />
       <mj-section padding="0" />
     </mj-attributes>
     <mj-style>
+      :root {
+        color-scheme: light only;
+        supported-color-schemes: light only;
+      }
       .hero-section {
-        background: #a9d621;
+        background: #a9d621 !important;
         border-radius: 8px;
         border: 3px #1e1e1e solid;
         box-shadow: -15px 15px 0px 0px #1e1e1e;
       }
       .content-box {
-        background: #f5ffd5;
+        background: #f5ffd5 !important;
         border-radius: 8px;
       }
+      .highlight {
+        color: #a9d621 !important;
+        text-decoration: underline;
+      }
+      /* Force colors in dark mode */
+      @media (prefers-color-scheme: dark) {
+        .darkmode { background-color: #ffffff !important; }
+        h1, h2, h3, p, span, td, th, div { color: inherit !important; }
+        .hero-section { background: #a9d621 !important; }
+        .content-box { background: #f5ffd5 !important; }
+      }
+      /* Gmail dark mode */
+      u + .body .darkmode { background-color: #ffffff !important; }
+      /* Outlook dark mode */
+      [data-ogsc] .darkmode { background-color: #ffffff !important; }
+      [data-ogsc] h1, [data-ogsc] h2, [data-ogsc] h3, [data-ogsc] p, [data-ogsc] span, [data-ogsc] td { color: inherit !important; }
       @media only screen and (max-width: 480px) {
         .hero-section {
           box-shadow: -8px 8px 0px 0px #1e1e1e !important;
@@ -50,11 +74,11 @@
             align="center"
             padding="0 0 16px 0"
           >
-            Testimonial Request
+            Welcome to {{appName}}!
           </mj-text>
           <mj-image
-            src="https://res.cloudinary.com/drbi9pu6v/image/upload/v1766504308/seventh-template_zlvwyj.png"
-            alt="Testimonial request illustration"
+            src="https://res.cloudinary.com/drbi9pu6v/image/upload/v1766504222/eighth-template_ipfpsr.png"
+            alt="Welcome illustration"
             width="120px"
             align="center"
             padding="0"
@@ -62,56 +86,29 @@
         </mj-column>
       </mj-section>
 
-      <!-- Content Box 1 -->
+      <!-- Content Box -->
       <mj-section padding="0 20px 24px 20px">
         <mj-column css-class="content-box" background-color="#f5ffd5" border-radius="8px" padding="40px 20px">
           <mj-text padding="0">
-            You've Been Asked for Feedback!<br />{{requesterName}} would
-            greatly appreciate your testimonial about their work or
-            collaboration<br /><br />{{#if message}}<br /><br />
-            <span style="font-size: 14px; line-height: 1.2;">Your Published Testimonial:<br />{{content}}</span>
-          </mj-text>
-        </mj-column>
-      </mj-section>
-
-      <!-- Content Box 2 -->
-      <mj-section padding="0 20px 24px 20px">
-        <mj-column css-class="content-box" background-color="#f5ffd5" border-radius="8px" padding="40px 20px">
-          <mj-text padding="0 0 54px 0">
-            Sharing your experience helps {{requesterName}} showcase their skills
-            and build their professional reputation.
-          </mj-text>
-          <mj-button
-            href="{{testimonialUrl}}"
-            background-color="#a9d621"
-            color="black"
-            font-size="16px"
-            font-weight="400"
-            border-radius="6px"
-            padding="0 0 54px 0"
-            inner-padding="12px 24px"
-          >
-            Write your testimonial
-          </mj-button>
-          <mj-text padding="0">
-            What to include in your testimonial:<br /><br />Your experience working with {{requesterName}}<br />Specific skills
-            or qualities you appreciated<br />The impact of their work on your
-            project/business<br />Why you would recommend them to others
+            Your account has been successfully created. We're excited to have you
+            on board!<br /><br />Get started by exploring your dashboard and
+            setting up your profile.
           </mj-text>
         </mj-column>
       </mj-section>
 
       <!-- Footer Text -->
-      <mj-section padding="24px 20px">
+      <mj-section padding="0 20px 24px 20px">
         <mj-column>
           <mj-text
             font-size="18px"
-            color="black"
-            align="center"
+            color="#3f3f3f"
+            line-height="1.3"
             padding="0"
           >
-            If you have any questions or concerns, please contact {{requesterName}}
-            directly.
+            Need help getting started?
+            <span class="highlight">Check out our guide</span>.<br /><br />Happy
+            freelancing! The {{appName}} Team
           </mj-text>
         </mj-column>
       </mj-section>

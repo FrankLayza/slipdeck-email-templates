@@ -2,31 +2,35 @@
   <mj-head>
     <mj-title>Confirm Your Subscription</mj-title>
     <mj-preview>One click away from joining our community</mj-preview>
-    <mj-font name="Teachers" href="https://fonts.googleapis.com/css2?family=Teachers:ital,wght@0,400..800;1,400..800&display=swap" />
+    <mj-font
+      name="Teachers"
+      href="https://fonts.googleapis.com/css2?family=Teachers:ital,wght@0,400..800;1,400..800&display=swap"
+    />
+    <mj-raw>
+      <meta name="color-scheme" content="light only" />
+      <meta name="supported-color-schemes" content="light only" />
+    </mj-raw>
     <mj-attributes>
       <mj-all font-family="Teachers, Arial, sans-serif" />
       <mj-text font-size="16px" color="#3f3f3f" line-height="1.6" />
       <mj-section padding="0" />
     </mj-attributes>
     <mj-style>
-      .hero-section {
-        background: #a9d621;
-        border-radius: 8px;
-        border: 3px #1e1e1e solid;
-        box-shadow: -15px 15px 0px 0px #1e1e1e;
-      }
-      .content-box {
-        background: #f5ffd5;
-        border-radius: 8px;
-      }
-      .highlight {
-        color: #a9d621;
-      }
-      @media only screen and (max-width: 480px) {
-        .hero-section {
-          box-shadow: -8px 8px 0px 0px #1e1e1e !important;
-        }
-      }
+      :root { color-scheme: light only; supported-color-schemes: light only; }
+      .hero-section { background: #a9d621 !important; border-radius: 8px;
+      border: 3px #1e1e1e solid; box-shadow: -15px 15px 0px 0px #1e1e1e; }
+      .content-box { background: #f5ffd5 !important; border-radius: 8px; }
+      .highlight { color: #a9d621 !important; } /* Force colors in dark mode */
+      @media (prefers-color-scheme: dark) { .darkmode { background-color:
+      #ffffff !important; } h1, h2, h3, p, span, td, th, div { color: inherit
+      !important; } .hero-section { background: #a9d621 !important; }
+      .content-box { background: #f5ffd5 !important; } } /* Gmail dark mode */ u
+      + .body .darkmode { background-color: #ffffff !important; } /* Outlook
+      dark mode */ [data-ogsc] .darkmode { background-color: #ffffff !important;
+      } [data-ogsc] h1, [data-ogsc] h2, [data-ogsc] h3, [data-ogsc] p,
+      [data-ogsc] span, [data-ogsc] td { color: inherit !important; } @media
+      only screen and (max-width: 480px) { .hero-section { box-shadow: -8px 8px
+      0px 0px #1e1e1e !important; } }
     </mj-style>
   </mj-head>
   <mj-body background-color="#f8f9fa">
@@ -45,7 +49,12 @@
 
       <!-- Hero Section -->
       <mj-section padding="0 20px 24px 20px">
-        <mj-column css-class="hero-section" background-color="#a9d621" border-radius="8px" padding="24px 20px">
+        <mj-column
+          css-class="hero-section"
+          background-color="#a9d621"
+          border-radius="8px"
+          padding="24px 20px"
+        >
           <mj-text
             font-size="28px"
             font-weight="700"
@@ -77,11 +86,17 @@
 
       <!-- Content Box - Welcome -->
       <mj-section padding="0 20px 24px 20px">
-        <mj-column css-class="content-box" background-color="#f5ffd5" border-radius="8px" padding="40px 20px">
+        <mj-column
+          css-class="content-box"
+          background-color="#f5ffd5"
+          border-radius="8px"
+          padding="40px 20px"
+        >
           <mj-text padding="0">
             Welcome Aboard! 👋 <br /><br />We're thrilled to have you join the
-            {{appName}} community! <br /><br />To ensure you receive our updates,
-            please confirm your email address by clicking the button below.
+            {{appName}} community! <br /><br />To ensure you receive our
+            updates, please confirm your email address by clicking the button
+            below.
           </mj-text>
         </mj-column>
       </mj-section>
@@ -108,8 +123,8 @@
       <mj-section padding="0 20px 24px 20px">
         <mj-column>
           <mj-text padding="0">
-            🔒 Security Note<br /><br />This confirmation ensures that only you can
-            subscribe to our newsletter. <br />If you didn't request this
+            🔒 Security Note<br /><br />This confirmation ensures that only you
+            can subscribe to our newsletter. <br />If you didn't request this
             subscription, you can safely ignore this email.
           </mj-text>
         </mj-column>
@@ -119,7 +134,8 @@
       <mj-section padding="0 20px 24px 20px">
         <mj-column>
           <mj-text padding="0">
-            Can't click the button? Copy and paste this link in your browser: <br />
+            Can't click the button? Copy and paste this link in your browser:
+            <br />
             <br /><span class="highlight">{{confirmLink}}</span>
           </mj-text>
         </mj-column>
@@ -127,7 +143,12 @@
 
       <!-- Content Box - What to Expect -->
       <mj-section padding="0 20px 24px 20px">
-        <mj-column css-class="content-box" background-color="#f5ffd5" border-radius="8px" padding="40px 20px">
+        <mj-column
+          css-class="content-box"
+          background-color="#f5ffd5"
+          border-radius="8px"
+          padding="40px 20px"
+        >
           <mj-text padding="0">
             What to expect as a subscriber:<br /><br />🎯Expert Insights: Get
             professional tips and industry updates<br /><br />🚀Latest Features:
@@ -142,12 +163,7 @@
       <!-- Footer Text -->
       <mj-section padding="24px 20px">
         <mj-column>
-          <mj-text
-            font-size="16px"
-            color="#373737"
-            align="center"
-            padding="0"
-          >
+          <mj-text font-size="16px" color="#373737" align="center" padding="0">
             We typically send 1-2 emails per week with valuable content. You can
             unsubscribe at any time.
           </mj-text>
@@ -157,7 +173,12 @@
       <!-- Footer -->
       <mj-section padding="32px 20px 40px 20px" border-top="1px solid #e5e7eb">
         <mj-column>
-          <mj-social font-size="15px" icon-size="30px" mode="horizontal" padding="0 0 24px 0">
+          <mj-social
+            font-size="15px"
+            icon-size="30px"
+            mode="horizontal"
+            padding="0 0 24px 0"
+          >
             <mj-social-element
               src="https://res.cloudinary.com/drbi9pu6v/image/upload/v1766505157/twitter_qmj5gw.png"
               href=""
@@ -169,12 +190,7 @@
               icon-size="30px"
             />
           </mj-social>
-          <mj-text
-            font-size="14px"
-            color="#323232"
-            align="center"
-            padding="0"
-          >
+          <mj-text font-size="14px" color="#323232" align="center" padding="0">
             © {{currentYear}} {{appName}}. All rights reserved.
           </mj-text>
         </mj-column>
