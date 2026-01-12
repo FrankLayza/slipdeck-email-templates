@@ -1,311 +1,343 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="globals.css" />
-    <link rel="stylesheet" href="style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Teachers:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
-    <style>
-      body {
-        margin: 0;
-        padding: 0;
-        background-color: #f8f9fa;
-        font-family: Teachers;
-        box-sizing: border-box;
-      }
+<!doctype html>
+<html lang="und" dir="auto" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
 
-      .email-container {
-        max-width: 600px;
-        width: 100%;
-        margin: 0 auto;
-        position: relative;
-        background-color: #ffffff;
-        box-sizing: border-box;
-      }
+<head>
+  <title>Welcome!</title>
+  <!--[if !mso]><!-->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!--<![endif]-->
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style type="text/css">
+    #outlook a {
+      padding: 0;
+    }
 
-      .header {
-        padding: 40px 20px 10px 20px;
-        text-align: left;
-        box-sizing: border-box;
-        margin: 0;
-      }
+    body {
+      margin: 0;
+      padding: 0;
+      -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+    }
 
-      .header img {
-        max-width: 120px;
-        height: auto;
-        display: block;
-        margin: 0;
-        box-sizing: border-box;
-      }
+    table,
+    td {
+      border-collapse: collapse;
+      mso-table-lspace: 0pt;
+      mso-table-rspace: 0pt;
+    }
 
-      .hero-section {
-        width: 100%;
-        margin: 0 0 24px 0;
-        background: #a9d621;
-        border-radius: 8px;
-        border: 3px #1e1e1e solid;
-        padding: 24px 20px;
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 16px;
-        box-shadow: -15px 15px 0px 0px #1e1e1e;
-        box-sizing: border-box;
-      }
+    img {
+      border: 0;
+      height: auto;
+      line-height: 100%;
+      outline: none;
+      text-decoration: none;
+      -ms-interpolation-mode: bicubic;
+    }
 
-      .hero-title {
-        color: #222222;
-        font-size: clamp(18px, 3vw, 28px);
-        font-weight: 700;
-        text-align: center;
-        word-wrap: break-word;
-        margin: 0;
-        box-sizing: border-box;
-        font-family: Teachers;
-        padding: 0;
-      }
-
-      .hero-image {
-        max-width: 120px;
-        width: auto;
-        height: auto;
-        box-sizing: border-box;
-      }
-
-      .content-box {
-        width: 100%;
-        margin: 0 0 24px 0;
-        padding: 40px 20px;
-        background: #f5ffd5;
-        border-radius: 8px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        box-sizing: border-box;
-      }
-
-      .content-box-inner {
-        width: 100%;
-        color: #3f3f3f;
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 1.6;
-        word-wrap: break-word;
-        box-sizing: border-box;
-        font-family: Teachers;
-        margin: 0;
-        padding: 0;
-      }
-
-      .footer-text {
-        width: 100%;
-        margin: 0 auto 24px;
-        padding: 0 20px;
-        color: #3f3f3f;
-        font-size: clamp(16px, 2.5vw, 24px);
-        font-weight: 400;
-        line-height: 1.3;
-        word-wrap: break-word;
-        box-sizing: border-box;
-        font-family: Teachers;
-      }
-
-      .highlight {
-        color: #a9d621;
-        text-decoration: underline;
-      }
-
-      .footer {
-        width: 100%;
-        padding: 32px 20px 40px 20px;
-        border-top: 1px solid #e5e7eb;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 24px;
-        box-sizing: border-box;
-        margin: 0;
-      }
-
-      .social-icons {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 20px;
-        flex-wrap: wrap;
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-      }
-
-      .social-icons a {
-        box-sizing: border-box;
-        padding: 4px;
-        overflow: hidden;
-        border-radius: 10px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-width: 28px;
-        margin: 0;
-        text-decoration: none;
-      }
-
-      .social-icons img {
-        width: 30px;
-        height: 30px;
-        display: block;
-        box-sizing: border-box;
-      }
-
-      .copyright {
-        width: 100%;
-        text-align: center;
-        color: #323232;
-        font-size: 14px;
-        font-weight: 400;
-        word-wrap: break-word;
-        box-sizing: border-box;
-        font-family: Teachers;
-        margin: 0;
-        padding: 0;
-      }
-
-      /* Mobile Responsive Styles */
-      @media only screen and (max-width: 480px) {
-        .header {
-          padding: 24px 16px 8px 16px;
-        }
-
-        .hero-section {
-          padding: 20px 16px;
-          margin: 0 8px 20px 8px;
-          box-shadow: -8px 8px 0px 0px #1e1e1e;
-          gap: 12px;
-        }
-
-        .hero-title {
-          font-size: 20px;
-        }
-
-        .hero-image {
-          max-width: 100px;
-        }
-
-        .content-box {
-          padding: 24px 16px;
-          margin: 0 8px 20px 8px;
-        }
-
-        .content-box-inner {
-          font-size: 15px;
-        }
-
-        .footer-text {
-          padding: 0 16px;
-          font-size: 15px;
-        }
-
-        .footer {
-          padding: 24px 16px 32px 16px;
-          gap: 20px;
-        }
-
-        .social-icons {
-          gap: 16px;
-        }
-
-        .copyright {
-          font-size: 13px;
-        }
-      }
-
-      @media only screen and (max-width: 360px) {
-        .hero-section {
-          box-shadow: -6px 6px 0px 0px #1e1e1e;
-          padding: 16px 12px;
-        }
-
-        .hero-title {
-          font-size: 18px;
-        }
-
-        .content-box {
-          padding: 20px 12px;
-        }
-
-        .content-box-inner {
-          font-size: 14px;
-        }
-
-        .footer-text {
-          padding: 0 12px;
-          font-size: 14px;
-        }
-      }
+    p {
+      display: block;
+      margin: 13px 0;
+    }
+  </style>
+  <!--[if mso]>
+    <noscript>
+    <xml>
+    <o:OfficeDocumentSettings>
+      <o:AllowPNG/>
+      <o:PixelsPerInch>96</o:PixelsPerInch>
+    </o:OfficeDocumentSettings>
+    </xml>
+    </noscript>
+    <![endif]-->
+  <!--[if lte mso 11]>
+    <style type="text/css">
+      .mj-outlook-group-fix { width:100% !important; }
     </style>
-  </head>
-  <body>
-    <div class="email-container">
-      <div class="header">
-        <img
-          src="https://res.cloudinary.com/drbi9pu6v/image/upload/v1766504765/slipdeck_hjdprj.png"
-          alt="Logo"
-        />
-      </div>
+    <![endif]-->
+  <!--[if !mso]><!-->
+  <link href="https://fonts.googleapis.com/css2?family=Teachers:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet" type="text/css">
+  <style type="text/css">
+    @import url(https://fonts.googleapis.com/css2?family=Teachers:ital,wght@0,400..800;1,400..800&display=swap);
+  </style>
+  <!--<![endif]-->
+  <style type="text/css">
+    @media only screen and (min-width:480px) {
+      .mj-column-per-100 {
+        width: 100% !important;
+        max-width: 100%;
+      }
+    }
+  </style>
+  <style media="screen and (min-width:480px)">
+    .moz-text-html .mj-column-per-100 {
+      width: 100% !important;
+      max-width: 100%;
+    }
+  </style>
+  <style type="text/css">
+    @media only screen and (max-width:479px) {
+      table.mj-full-width-mobile {
+        width: 100% !important;
+      }
 
-      <div class="hero-section">
-        <div class="hero-title">
-          Welcome to {{appName}}!
-        </div>
-        <img
-          class="hero-image"
-          src="https://res.cloudinary.com/drbi9pu6v/image/upload/v1766504222/eighth-template_ipfpsr.png"
-          alt="Welcome illustration"
-        />
-      </div>
+      td.mj-full-width-mobile {
+        width: auto !important;
+      }
+    }
+  </style>
+  <style type="text/css">
+    .hero-section {
+      background: #a9d621;
+      border-radius: 8px;
+      border: 3px #1e1e1e solid;
+      box-shadow: -15px 15px 0px 0px #1e1e1e;
+    }
 
-      <div class="content-box">
-        <div class="content-box-inner">
-          Your account has been successfully created. We're excited to have you
-          on board!<br /><br />Get started by exploring your dashboard and
-          setting up your profile.
-        </div>
-      </div>
+    .content-box {
+      background: #f5ffd5;
+      border-radius: 8px;
+    }
 
-      <div class="footer-text">
-        Need help getting started?
-        <span class="highlight">Check out our guide</span>.<br /><br />Happy
-        freelancing! The {{appName}} Team
-      </div>
+    .highlight {
+      color: #a9d621;
+      text-decoration: underline;
+    }
 
-      <div class="footer">
-        <div class="social-icons">
-          <a href="">
-            <img
-              width="38px"
-              height="38px"
-              src="https://res.cloudinary.com/drbi9pu6v/image/upload/v1766505157/twitter_qmj5gw.png"
-              alt="socials"
-            />
-          </a>
-          <a href="">
-            <img
-              width="38px"
-              height="38px"
-              src="https://res.cloudinary.com/drbi9pu6v/image/upload/v1766505165/facebook_kcm4gg.png"
-              alt="socials"
-            />
-          </a>
-        </div>
-        <div class="copyright">
-          © {{currentYear}} {{appName}}. All rights reserved.
-        </div>
-      </div>
+    @media only screen and (max-width: 480px) {
+      .hero-section {
+        box-shadow: -8px 8px 0px 0px #1e1e1e !important;
+      }
+    }
+  </style>
+</head>
+
+<body style="word-spacing:normal;background-color:#f8f9fa;">
+  <div style="display:none;font-size:1px;color:#ffffff;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;">Your account has been successfully created</div>
+  <div aria-label="Welcome!" aria-roledescription="email" style="background-color:#f8f9fa;" role="article" lang="und" dir="auto">
+    <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="" role="presentation" style="width:600px;" width="600" bgcolor="#ffffff" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+    <div style="background:#ffffff;background-color:#ffffff;margin:0px auto;max-width:600px;">
+      <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="background:#ffffff;background-color:#ffffff;width:100%;">
+        <tbody>
+          <tr>
+            <td style="direction:ltr;font-size:0px;padding:0;text-align:center;">
+              <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><![endif]-->
+              <!-- Header -->
+              <!--[if mso | IE]><tr><td class="" width="600px" ><table align="center" border="0" cellpadding="0" cellspacing="0" class="" role="presentation" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+              <div style="margin:0px auto;max-width:600px;">
+                <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
+                  <tbody>
+                    <tr>
+                      <td style="direction:ltr;font-size:0px;padding:40px 20px 10px 20px;text-align:center;">
+                        <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:560px;" ><![endif]-->
+                        <div class="mj-column-per-100 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+                          <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;" width="100%">
+                            <tbody>
+                              <tr>
+                                <td align="left" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                                  <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:collapse;border-spacing:0px;">
+                                    <tbody>
+                                      <tr>
+                                        <td style="width:120px;">
+                                          <img alt="Logo" src="https://res.cloudinary.com/drbi9pu6v/image/upload/v1766504765/slipdeck_hjdprj.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="120" height="auto" />
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <!--[if mso | IE]></td></tr></table><![endif]-->
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!--[if mso | IE]></td></tr></table></td></tr><![endif]-->
+              <!-- Hero Section -->
+              <!--[if mso | IE]><tr><td class="" width="600px" ><table align="center" border="0" cellpadding="0" cellspacing="0" class="" role="presentation" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+              <div style="margin:0px auto;max-width:600px;">
+                <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
+                  <tbody>
+                    <tr>
+                      <td style="direction:ltr;font-size:0px;padding:0 20px 24px 20px;text-align:center;">
+                        <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="hero-section-outlook" style="vertical-align:top;width:560px;" ><![endif]-->
+                        <div class="mj-column-per-100 mj-outlook-group-fix hero-section" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+                          <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%" style="border-collapse:separate;">
+                            <tbody>
+                              <tr>
+                                <td style="background-color:#a9d621;border-radius:8px;vertical-align:top;border-collapse:separate;padding:24px 20px;">
+                                  <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="" width="100%">
+                                    <tbody>
+                                      <tr>
+                                        <td align="center" style="font-size:0px;padding:0 0 16px 0;word-break:break-word;">
+                                          <div style="font-family:Teachers, Arial, sans-serif;font-size:28px;font-weight:700;line-height:1.6;text-align:center;color:#222222;">Welcome to {{appName}}!</div>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td align="center" style="font-size:0px;padding:0;word-break:break-word;">
+                                          <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:collapse;border-spacing:0px;">
+                                            <tbody>
+                                              <tr>
+                                                <td style="width:120px;">
+                                                  <img alt="Welcome illustration" src="https://res.cloudinary.com/drbi9pu6v/image/upload/v1766504222/eighth-template_ipfpsr.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="120" height="auto" />
+                                                </td>
+                                              </tr>
+                                            </tbody>
+                                          </table>
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <!--[if mso | IE]></td></tr></table><![endif]-->
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!--[if mso | IE]></td></tr></table></td></tr><![endif]-->
+              <!-- Content Box -->
+              <!--[if mso | IE]><tr><td class="" width="600px" ><table align="center" border="0" cellpadding="0" cellspacing="0" class="" role="presentation" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+              <div style="margin:0px auto;max-width:600px;">
+                <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
+                  <tbody>
+                    <tr>
+                      <td style="direction:ltr;font-size:0px;padding:0 20px 24px 20px;text-align:center;">
+                        <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="content-box-outlook" style="vertical-align:top;width:560px;" ><![endif]-->
+                        <div class="mj-column-per-100 mj-outlook-group-fix content-box" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+                          <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%" style="border-collapse:separate;">
+                            <tbody>
+                              <tr>
+                                <td style="background-color:#f5ffd5;border-radius:8px;vertical-align:top;border-collapse:separate;padding:40px 20px;">
+                                  <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="" width="100%">
+                                    <tbody>
+                                      <tr>
+                                        <td align="left" style="font-size:0px;padding:0;word-break:break-word;">
+                                          <div style="font-family:Teachers, Arial, sans-serif;font-size:16px;line-height:1.6;text-align:left;color:#3f3f3f;">Your account has been successfully created. We're excited to have you on board!<br /><br />Get started by exploring your dashboard and setting up your profile.</div>
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <!--[if mso | IE]></td></tr></table><![endif]-->
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!--[if mso | IE]></td></tr></table></td></tr><![endif]-->
+              <!-- Footer Text -->
+              <!--[if mso | IE]><tr><td class="" width="600px" ><table align="center" border="0" cellpadding="0" cellspacing="0" class="" role="presentation" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+              <div style="margin:0px auto;max-width:600px;">
+                <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
+                  <tbody>
+                    <tr>
+                      <td style="direction:ltr;font-size:0px;padding:0 20px 24px 20px;text-align:center;">
+                        <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:560px;" ><![endif]-->
+                        <div class="mj-column-per-100 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+                          <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;" width="100%">
+                            <tbody>
+                              <tr>
+                                <td align="left" style="font-size:0px;padding:0;word-break:break-word;">
+                                  <div style="font-family:Teachers, Arial, sans-serif;font-size:18px;line-height:1.3;text-align:left;color:#3f3f3f;">Need help getting started? <span class="highlight">Check out our guide</span>.<br /><br />Happy freelancing! The {{appName}} Team</div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <!--[if mso | IE]></td></tr></table><![endif]-->
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!--[if mso | IE]></td></tr></table></td></tr><![endif]-->
+              <!-- Footer -->
+              <!--[if mso | IE]><tr><td class="" width="600px" ><table align="center" border="0" cellpadding="0" cellspacing="0" class="" role="presentation" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+              <div style="margin:0px auto;max-width:600px;">
+                <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
+                  <tbody>
+                    <tr>
+                      <td style="border-top:1px solid #e5e7eb;direction:ltr;font-size:0px;padding:32px 20px 40px 20px;text-align:center;">
+                        <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:560px;" ><![endif]-->
+                        <div class="mj-column-per-100 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+                          <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;" width="100%">
+                            <tbody>
+                              <tr>
+                                <td align="center" style="font-size:0px;padding:0 0 24px 0;word-break:break-word;">
+                                  <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" ><tr><td><![endif]-->
+                                  <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="float:none;display:inline-table;">
+                                    <tbody>
+                                      <tr>
+                                        <td style="padding:4px;vertical-align:middle;">
+                                          <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-radius:3px;width:30px;">
+                                            <tbody>
+                                              <tr>
+                                                <td style="font-size:0;height:30px;vertical-align:middle;width:30px;">
+                                                  <img alt="" src="https://res.cloudinary.com/drbi9pu6v/image/upload/v1766505157/twitter_qmj5gw.png" style="border-radius:3px;display:block;" width="30" />
+                                                </td>
+                                              </tr>
+                                            </tbody>
+                                          </table>
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                  <!--[if mso | IE]></td><td><![endif]-->
+                                  <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="float:none;display:inline-table;">
+                                    <tbody>
+                                      <tr>
+                                        <td style="padding:4px;vertical-align:middle;">
+                                          <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-radius:3px;width:30px;">
+                                            <tbody>
+                                              <tr>
+                                                <td style="font-size:0;height:30px;vertical-align:middle;width:30px;">
+                                                  <img alt="" src="https://res.cloudinary.com/drbi9pu6v/image/upload/v1766505165/facebook_kcm4gg.png" style="border-radius:3px;display:block;" width="30" />
+                                                </td>
+                                              </tr>
+                                            </tbody>
+                                          </table>
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                  <!--[if mso | IE]></td></tr></table><![endif]-->
+                                </td>
+                              </tr>
+                              <tr>
+                                <td align="center" style="font-size:0px;padding:0;word-break:break-word;">
+                                  <div style="font-family:Teachers, Arial, sans-serif;font-size:14px;line-height:1.6;text-align:center;color:#323232;">© {{currentYear}} {{appName}}. All rights reserved.</div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <!--[if mso | IE]></td></tr></table><![endif]-->
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!--[if mso | IE]></td></tr></table></td></tr></table><![endif]-->
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
-  </body>
+    <!--[if mso | IE]></td></tr></table><![endif]-->
+  </div>
+</body>
+
 </html>

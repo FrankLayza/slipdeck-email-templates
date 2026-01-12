@@ -1,0 +1,151 @@
+<mjml>
+  <mj-head>
+    <mj-title>Signature Request</mj-title>
+    <mj-preview>You have been asked to review and sign a contract</mj-preview>
+    <mj-font
+      name="Teachers"
+      href="https://fonts.googleapis.com/css2?family=Teachers:ital,wght@0,400..800;1,400..800&display=swap"
+    />
+    <mj-attributes>
+      <mj-all font-family="Teachers, Arial, sans-serif" />
+      <mj-text font-size="16px" color="#3f3f3f" line-height="1.6" />
+      <mj-section padding="0" />
+    </mj-attributes>
+    <mj-style>
+      .hero-section { background: #a9d621; border-radius: 8px; border: 3px
+      #1e1e1e solid; box-shadow: -15px 15px 0px 0px #1e1e1e; } .content-box {
+      background: #f5ffd5; border-radius: 8px; } .expiry { color: #ff383c; }
+      @media only screen and (max-width: 480px) { .hero-section { box-shadow:
+      -8px 8px 0px 0px #1e1e1e !important; } }
+    </mj-style>
+  </mj-head>
+  <mj-body background-color="#f8f9fa">
+    <mj-wrapper padding="0" background-color="#ffffff">
+      <!-- Header -->
+      <mj-section padding="40px 20px 10px 20px">
+        <mj-column>
+          <mj-image
+            src="https://res.cloudinary.com/drbi9pu6v/image/upload/v1766504765/slipdeck_hjdprj.png"
+            alt="Logo"
+            width="120px"
+            align="left"
+          />
+        </mj-column>
+      </mj-section>
+
+      <!-- Hero Section -->
+      <mj-section padding="0 20px 24px 20px">
+        <mj-column
+          css-class="hero-section"
+          background-color="#a9d621"
+          border-radius="8px"
+          padding="24px 20px"
+        >
+          <mj-text
+            font-size="28px"
+            font-weight="700"
+            color="#222222"
+            align="center"
+            padding="0 0 16px 0"
+          >
+            Signature Request
+          </mj-text>
+          <mj-image
+            src="https://res.cloudinary.com/drbi9pu6v/image/upload/v1766504325/third-template_u7wubk.png"
+            alt="Signature request illustration"
+            width="120px"
+            align="center"
+            padding="0"
+          />
+        </mj-column>
+      </mj-section>
+
+      <!-- Content Box - Contract Details -->
+      <mj-section padding="0 20px 24px 20px">
+        <mj-column
+          css-class="content-box"
+          background-color="#f5ffd5"
+          border-radius="8px"
+          padding="40px 20px"
+        >
+          <mj-text padding="0">
+            Hello {{clientName}},<br />You have been asked to review and sign
+            the following contract:<br /><br />Contract Title:
+            {{contractTitle}}<br /><br />Created By: {{createdByName}}<br /><br />Created
+            On: {{createdDate}}<br /><br />{{#if expiryDate}}<br /><br />⏰
+            <span class="expiry">Please sign before: {{expiryDate}}</span>
+          </mj-text>
+        </mj-column>
+      </mj-section>
+
+      <!-- Info Text -->
+      <mj-section padding="0 20px 24px 20px">
+        <mj-column>
+          <mj-text padding="0">
+            To review and sign the contract, please click the button below:
+          </mj-text>
+        </mj-column>
+      </mj-section>
+
+      <!-- CTA Button -->
+      <mj-section padding="0 20px 30px 20px">
+        <mj-column>
+          <mj-button
+            href="{{signatureUrl}}"
+            background-color="#a9d621"
+            color="black"
+            font-size="16px"
+            font-weight="400"
+            border-radius="6px"
+            padding="0"
+            inner-padding="12px 24px"
+          >
+            Review & Sign Contract
+          </mj-button>
+        </mj-column>
+      </mj-section>
+
+      <!-- Additional Info -->
+      <mj-section padding="0 20px 24px 20px">
+        <mj-column>
+          <mj-text padding="0">
+            Important: This link is unique to you and should not be shared with
+            others.<br />If the button doesn't work, you can copy and paste this
+            link into your browser:<br /><br />{{signatureUrl}}<br /><br />What
+            to Expect:<br />Review the contract terms<br />Add any comments or
+            questions<br />Add your signature electronically<br />Download a
+            copy for your records<br /><br />If you have any questions, please
+            contact {{createdByName}} directly.<br />Best regards,<br />
+            The {{appName}} Team
+          </mj-text>
+        </mj-column>
+      </mj-section>
+
+      <!-- Footer -->
+      <mj-section padding="32px 20px 40px 20px" border-top="1px solid #e5e7eb">
+        <mj-column>
+          <mj-social
+            font-size="15px"
+            icon-size="30px"
+            mode="horizontal"
+            padding="0 0 24px 0"
+          >
+            <mj-social-element
+              src="https://res.cloudinary.com/drbi9pu6v/image/upload/v1766505157/twitter_qmj5gw.png"
+              href=""
+              icon-size="30px"
+            />
+            <mj-social-element
+              src="https://res.cloudinary.com/drbi9pu6v/image/upload/v1766505165/facebook_kcm4gg.png"
+              href=""
+              icon-size="30px"
+            />
+          </mj-social>
+          <mj-text font-size="14px" color="#323232" align="center" padding="0">
+            © {{currentYear}} {{appName}}. All rights reserved.
+          </mj-text>
+        </mj-column>
+      </mj-section>
+    </mj-wrapper>
+  </mj-body>
+</mjml>
